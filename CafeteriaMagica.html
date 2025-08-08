@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function saludarCliente(nombre) {
+            // Verificamos si el nombre está vacío o es nulo.
+            if (nombre === null || nombre.trim() === '') {
+
+                console.log(`¡Hola, Mi mejor cliente! Bienvenido a la Cafetería Mágica.`);
+            } else {
+
+                console.log(`¡Hola, ${nombre}! Bienvenido a la Cafetería Mágica.`);
+            }
+        }
+
+        let nombreCliente = prompt("Por favor, ingresa tu nombre:");
+
+        saludarCliente(nombreCliente);
+
+        function calcularPrecioTotal(precio1, precio2) {
+            return precio1 + precio2;
+        }
+
+        let precioProducto1 = parseFloat(prompt("Ingresa el precio del primer producto:"));
+        let precioProducto2 = parseFloat(prompt("Ingresa el precio del segundo producto:"));
+
+        // 3. Verificar que los precios sean números válidos
+        if (isNaN(precioProducto1) || isNaN(precioProducto2)) {
+            console.log("Error: Por favor, ingresa precios válidos.");
+        } else {
+            // 4. Calcular el total y mostrar el resultado
+            let total = calcularPrecioTotal(precioProducto1, precioProducto2);
+            console.log(`El precio total de su pedido es de $${total.toFixed(2)}.`);
+        }
+
+
+    </script>
+</body>
+
+</html>
